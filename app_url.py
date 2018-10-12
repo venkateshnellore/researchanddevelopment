@@ -11,7 +11,7 @@ def hello():
    return ("Application is working Fine")
 
 @app.route('/sendotp',methods=['POST'])
-def sendotp():
+def send_otp():
    return sendotp(request)
 
 if __name__ == "__main__":
