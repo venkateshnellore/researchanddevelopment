@@ -2,6 +2,7 @@ import json
 from flask import Flask,request, jsonify
 from flask_cors import CORS
 from otp_send import sendotp
+from acubefarms import sendemail
 
 app = Flask(__name__)
 CORS(app)
@@ -13,6 +14,10 @@ def hello():
 @app.route('/sendotp',methods=['POST'])
 def send_otp():
    return sendotp(request)
+
+@app.route('/acubefarms',methods=['POST'])
+def send_email():
+   return sendemail(request)
 
 if __name__ == "__main__":
   app.run(debug=True)
