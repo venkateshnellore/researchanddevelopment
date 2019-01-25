@@ -20,7 +20,7 @@ def sendemail(request):
      con.close()
      cur.close()
      
-     sender = "siva.infocuit@gmail.com"
+     sender = "siva@infocuittechnologies.com"
      receiver = Email
      print(sender,type(sender),receiver,type(receiver))
      
