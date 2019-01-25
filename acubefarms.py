@@ -20,7 +20,7 @@ def sendemail(request):
      con.close()
      cur.close()
      
-     sender = "siva@infocuittechnologies.com"
+     sender = "siva.infocuit@gmail.com"
      receiver = Email
      print(sender,type(sender),receiver,type(receiver))
      
@@ -52,8 +52,8 @@ def sendemail(request):
      #msg.attach(MIMEText(msg['subject'],'plain'))
      msg.attach(MIMEText(html,'html'))
      
-     gmailuser = 'siva@infocuittechnologies.com'
-     password = 'P@s$w0rds$'
+     gmailuser = 'siva.infocuit@gmail.com'
+     password = 'infocuit'
      server = smtplib.SMTP('smtp.gmail.com',587)
      server.starttls()
      server.login(gmailuser,password)
