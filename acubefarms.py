@@ -2,12 +2,8 @@ import json
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from flask import Flask,request
-import psycopg2
-import json
-app = Flask(__name__)
-@app.route("/acubefarms",methods=['POST'])
-def sendemail():
+
+def sendemail(request):
 
      Name = request.json['Name']
      Email = request.json['Email']
@@ -65,6 +61,3 @@ def sendemail():
      print ("the message has been sent successfully")
      server.quit()
      return(json.dumps({'Return': 'Message Send Successfully',"Return_Code":"MSS","Status": "Success","Status_Code": "200"}, sort_keys=True, indent=4))
-
-if __name__ == "__main__":
-     app.run(debug=True)
